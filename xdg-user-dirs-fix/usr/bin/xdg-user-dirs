@@ -1,0 +1,17 @@
+#!/bin/bash
+
+mkdir -p "$HOME/.config/gtk-3.0/" 2> /dev/null
+
+
+
+if [ ! -e "$HOME/.config/gtk-3.0/bookmarks" ]; then
+
+    if [ "$(echo "$LANG")" = "pt_BR.UTF-8" ]; then
+        echo "file:///$HOME/Downloads
+file:///$HOME/Documentos
+file:///$HOME/Música
+file:///$HOME/Imagens
+file:///$HOME/Vídeos" > $HOME/.config/gtk-3.0/bookmarks
+    fi
+
+fi

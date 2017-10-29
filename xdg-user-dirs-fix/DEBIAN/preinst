@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+package_name=xdg-user-dirs-fix
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/bin/xdg-user-dir.distrib" --rename "/usr/bin/xdg-user-dir"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/bin/xdg-user-dir")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/bin/xdg-user-dir.distrib" --rename "/usr/bin/xdg-user-dir"
+fi
+;;
+esac
+exit 0

@@ -1,0 +1,11 @@
+Package: xdg-user-dirs-fix
+Version: 1.0.0-1big1
+Depends: xdg-user-dirs
+Architecture: all
+Maintainer: Bruno Goncalves <www.biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:40
+Description: Fix bug between xdg user and nemo file manager
+
+
